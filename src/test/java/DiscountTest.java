@@ -29,7 +29,7 @@ public class DiscountTest {
         String password = driver.findElement(By.xpath("//*[contains(text(), 'Password')]/..//td[2]")).getText();
         driver.get("https://sharelane.com/cgi-bin/show_book.py?book_id=2");
         driver.findElement(By.name("email")).sendKeys(login);
-        driver.findElement(By.name("password")).sendKeys("1111");
+        driver.findElement(By.name("password")).sendKeys(password);
         driver.findElement(By.cssSelector("[value=Login]")).click();
         driver.get("https://sharelane.com/cgi-bin/show_book.py?book_id=2");
         driver.findElement(By.cssSelector("[href='./add_to_cart.py?book_id=2']")).click();
